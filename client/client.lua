@@ -81,11 +81,11 @@ RegisterNetEvent('Main:Save()',function()
 end)
 
 RegisterNetEvent('Main:Editor()',function()
-    Main:Notify(Lang.editor)
     NetworkSessionLeaveSinglePlayer()
     ActivateRockstarEditor() 
+    Main:Notify(Lang.editor)
 end)
 
 function Main:Notify(txt)
-    QBCore.Functions.Main:Notify(txt, 'inform', 3000)
+    QBCore.Functions.Notify(txt, 'inform', 3000)
 end
